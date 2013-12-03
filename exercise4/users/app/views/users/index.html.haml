@@ -1,0 +1,8 @@
+%h1 Users
+=link_to "new", new_user_path
+-@users.each do |user|
+  %h2
+    =user.name
+    =user.last_name
+
+  =link_to "show", edit_user_path(user)
