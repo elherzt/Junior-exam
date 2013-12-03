@@ -1,3 +1,4 @@
+#Supuesto Resultado = 200 375 425
 class Tripleta 
 
   def self.tripleta
@@ -8,7 +9,7 @@ class Tripleta
           b = i * i
           ab = a+b 
           c = x * x
-          if ab = c
+          if ab == c
             resuelve(x,i,j)
           end
         end
@@ -18,7 +19,7 @@ class Tripleta
 
   def self.resuelve(x,i,j)
     valor = x + j + i
-    if valor = 1000
+    if valor == 1000
       puts "#{j}"
       puts "#{i}"
       puts "#{x}"
