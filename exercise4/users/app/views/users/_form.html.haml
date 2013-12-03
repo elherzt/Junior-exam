@@ -1,0 +1,13 @@
+=simple_form_for @user do |f|
+  =f.input :name
+  =f.input :last_name
+  =f.input :email
+  -if @user.new_record?
+    =f.input :password
+  -else
+    =f.input :password, input_html: { :value => "#{@user.password}", :id => "actual" }
+    %h3 put your password
+    %input{type: "text", id: "confirm_password"}
+    %input{type: "button", id: "password2", value: "check password"}
+  =f.button :submit, class: "submit"
+= link_to "Show all users", users_path
